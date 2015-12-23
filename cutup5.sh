@@ -3,7 +3,7 @@
 # CUT-UP TOOLKIT
 # by Bruno Cardoso
 # http://navalha.org
-# Copyright (C) 2008-2012.
+# Copyright (C) 2008-2015.
 # GNU/GPL. See LICENSE for license details
 
 
