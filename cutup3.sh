@@ -46,7 +46,7 @@ fi
 
 j=1
 k=1
-for i in $(cat $ARQ | tr " " "\n" | shuf | tr "\n" " ") ; do
+for i in $(cat $ARQ | tr " " "\n" | shuf | tr "\n" " " | tr -d "*") ; do
 	echo -n "$i "
 	if [ $j -eq 12 ] ; then
         echo

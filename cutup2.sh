@@ -49,7 +49,7 @@ fi
 ########## ARRUMA ##########
 j=1
 k=1
-for i in $(cat $ARQ) ; do
+for i in $(cat $ARQ | tr -d "*") ; do
 	echo -n "$i "
 	if [ $j -eq $MAXPAL ] ; then
 		echo
@@ -63,6 +63,6 @@ for i in $(cat $ARQ) ; do
 	let j++
 done | shuf > $CUTUP
 
-rm $ARQ
+#rm $ARQ
 
 echo -e "\n> cut-up criado em $CUTUP\n"
