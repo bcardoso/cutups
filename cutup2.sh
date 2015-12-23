@@ -63,6 +63,6 @@ for i in $(cat $ARQ | tr -d "*") ; do
 	let j++
 done | shuf > $CUTUP
 
-#rm $ARQ
+rm $ARQ
 
 echo -e "\n> cut-up criado em $CUTUP\n"
