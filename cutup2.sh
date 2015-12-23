@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # by Bruno Cardoso
 # http://navalha.org
 # Copyright (C) 2008-2012.
 # GNU/GPL. See LICENSE for license details
 
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # ========================
 # Os scripts que compoem este toolkit foram escritos por mim para facilitar e emular o processo de recortar-e-colar textos ou fragmentos, tal como se faria com papel e tesoura.
 
@@ -19,12 +19,12 @@
 # 3. Abra o arquivo "cutup2_<data atual>.txt" para ver o resultado.
 
 
-# Este aquivo: CUTUP2.SH
+# Este arquivo: cutup2.sh
 # ======================
 # Cut-up simples: arruma o texto para que fique com 10 palavras por linha e depois embaralha todas as linhas.
 
 
-echo -e "\n$(tput bold)CUT-UP/BRICOLEUR TOOLKIT$(tput sgr0)"
+echo -e "\n$(tput bold)CUT-UP TOOLKIT$(tput sgr0)"
 echo -e "by Bruno Cardoso | bcardoso | http://navalha.org"
 echo -e "GNU/GPL. See LICENSE for license details."
 
@@ -40,9 +40,7 @@ MAXPAL=5 #palavras por linha
 #verifica os argumentos
 if [ $# -eq 0 ] ; then
 	echo -e "\nPasse um arquivo texto (ou mais) como argumento.\nO texto será cortado em diversas linhas (de $MAXPAL palavras) e depois embaralhado.\n"
-	exit 1	
-elif [ $# -eq 1 ] ; then
-	cp -f ${1} $ARQ
+	exit 1
 else
 	cat $@ > $ARQ
 fi

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # by Bruno Cardoso
 # http://navalha.org
 # Copyright (C) 2008-2012.
 # GNU/GPL. See LICENSE for license details
 
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # ========================
 # Os scripts que compoem este toolkit foram escritos por mim para facilitar e emular o processo de recortar-e-colar textos ou fragmentos, tal como se faria com papel e tesoura.
 
@@ -19,12 +19,12 @@
 # 3. Abra os arquivos "foldin1_<data atual>.txt" e "foldin2_<data atual>.txt" para ver o resultado.
 
 
-# Este aquivo: FOLDIN.SH
+# Este arquivo: foldin.sh
 # ======================
 # Outra técnica de cut-up utilizada por William Burroughs: junta-se a metade vertical de um página (A1 ou A2) com a outra metade de uma outra página (B1 ou B2), fundindo ambos os textos e gerando 2 outups: A1+B2 e B1+A2
 
 
-echo -e "\n$(tput bold)CUT-UP/BRICOLEUR TOOLKIT$(tput sgr0)"
+echo -e "\n$(tput bold)CUT-UP TOOLKIT$(tput sgr0)"
 echo -e "by Bruno Cardoso | bcardoso | http://navalha.org"
 echo -e "GNU/GPL. See LICENSE for license details."
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # by Bruno Cardoso
 # http://navalha.org
 # Copyright (C) 2008-2012.
 # GNU/GPL. See LICENSE for license details
 
 
-# CUT-UP/BRICOLEUR TOOLKIT
+# CUT-UP TOOLKIT
 # ========================
 # Os scripts que compoem este toolkit foram escritos por mim para facilitar e emular o processo de recortar-e-colar textos ou fragmentos, tal como se faria com papel e tesoura.
 
@@ -19,12 +19,12 @@
 # 3. Abra o arquivo "cutup3_<data atual>.txt" para ver o resultado.
 
 
-# Este aquivo: CUTUP3.SH
+# Este arquivo: cutup3.sh
 # ======================
 # Cut-up total: separa e embaralha TODAS as palavras do texto.
 
 
-echo -e "\n$(tput bold)CUT-UP/BRICOLEUR TOOLKIT$(tput sgr0)"
+echo -e "\n$(tput bold)CUT-UP TOOLKIT$(tput sgr0)"
 echo -e "by Bruno Cardoso | bcardoso | http://navalha.org"
 echo -e "GNU/GPL. See LICENSE for license details."
 
