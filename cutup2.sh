@@ -1,43 +1,41 @@
 #!/bin/bash
 
-# CUT-UP TOOLKIT
-# by Bruno Cardoso
-# http://navalha.org
-# Copyright (C) 2008-2015.
-# GNU/GPL. See LICENSE for license details
+### CUT-UP TOOLKIT
+### by Bruno Cardoso · http://navalha.org
+### 2008-2017. GNU/GPL. See LICENSE for license details
+
+# Os scripts de 'CUT-UP TOOLKIT' emulam o processo de recortar-e-colar de textos ou fragmentos ou fragmentos, tal como se faria com papel e tesoura, a partir dos métodos utilizados por William S. Burroughs.
+
+### MODO DE USAR
+# 1. Torne o programa executável: chmod +x cutup3.sh
+# 2. Rode o programa com um texto, por exemplo: ./cutup2.sh TEXTO-ORIGINAL.txt (é possível utilizar quantos textos quiser)
+# 3. O resultado do cut-up estará em "output/cutup2_<data atual>.txt"
 
 
-# CUT-UP TOOLKIT
-# ========================
-# Os scripts que compoem este toolkit foram escritos por mim para facilitar e emular o processo de recortar-e-colar textos ou fragmentos, tal como se faria com papel e tesoura.
+### cutup2.sh
+# Cut-up simples: formata o texto em $MAXPAL palavras por linha e então embaralha todas as linhas.
+
+echo -e "\n$(tput bold)CUT-UP TOOLKIT$(tput sgr0): $(basename $0)"
+echo -e "by bcardoso · http://navalha.org"
+
+#============================================================================#
+
+### DEFINIÇÕES
+# diretorio base dos scripts
+BASEDIR=~/bin/cutups
+OUTPUT=$BASEDIR/output
+
+# arquivos de entrada, saida e temporários
+ARQ=$BASEDIR/alltexts.txt
+CUTUP=$OUTPUT/cutup2_$(date +%F.%s).txt # formato do nome do arquivo
+
+# número de palavras por linha
+MAXPAL=7 #palavras por linha
 
 
-# Modo de Usar
-# ============
-# 1. Torne o programa executável: chmod +x cutup2.sh
-# 2. Rode o programa com um texto, por exemplo: ./cutup2.sh TEXTO-ORIGINAL.txt
-# 3. Abra o arquivo "cutup2_<data atual>.txt" para ver o resultado.
+#============================================================================#
 
-
-# Este arquivo: cutup2.sh
-# ======================
-# Cut-up simples: arruma o texto para que fique com 10 palavras por linha e depois embaralha todas as linhas.
-
-
-echo -e "\n$(tput bold)CUT-UP TOOLKIT$(tput sgr0)"
-echo -e "by Bruno Cardoso | bcardoso | http://navalha.org"
-echo -e "GNU/GPL. See LICENSE for license details."
-
-
-
-ARQ=alltexts.txt
-CUTUP=cutup2_$(date +%F.%s).txt
-TEMP=.temp_texto.txt
-
-MAXPAL=5 #palavras por linha
-
-
-#verifica os argumentos
+### verifica os parâmetros
 if [ $# -eq 0 ] ; then
 	echo -e "\nPasse um arquivo texto (ou mais) como argumento.\nO texto será cortado em diversas linhas (de $MAXPAL palavras) e depois embaralhado.\n"
 	exit 1
@@ -46,9 +44,8 @@ else
 fi
 
 
-########## ARRUMA ##########
-j=1
-k=1
+### RECORTE & COLAGEM
+j=1 ; k=1
 for i in $(cat $ARQ | tr -d "*") ; do
 	echo -n "$i "
 	if [ $j -eq $MAXPAL ] ; then
@@ -63,6 +60,9 @@ for i in $(cat $ARQ | tr -d "*") ; do
 	let j++
 done | shuf > $CUTUP
 
+# remove arquivo temporário
 rm $ARQ
 
+
+### local do arquivo final
 echo -e "\n> cut-up criado em $CUTUP\n"

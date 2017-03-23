@@ -1,17 +1,16 @@
-					   CUT-UP TOOLKIT
-						   by Bruno Cardoso
-						  http://navalha.org
+CUT-UP TOOLKIT
+by Bruno Cardoso
+http://navalha.org
 
 
 "Cut word lines — Cut music lines — Smash the control images — Smash the control machine — Burn the books — Kill the priests — Kill! Kill! Kill!"
-     -- William Burroughs, The Soft Machine (1961)
-
+-- William Burroughs, The Soft Machine (1961)
 
 
 00001. O QUE É ISSO?
 ====================
 
-Este "CUT-UP TOOLKIT" é um conjunto de shell-scripts para emular e realizar operações de recorte e colagem em textos digitais (apenas txt), tal como seriam feitos com papel e tesoura.
+CUT-UP TOOLKIT é um conjunto de shell-scripts para emular e realizar operações de recorte e colagem em textos digitais (txt), tal como seriam feitos com papel e tesoura.
 
 Para saber mais sobre cut-ups & bricolagem, visite minha página: http://navalha.org/cutups
 
@@ -22,19 +21,19 @@ Para saber mais sobre cut-ups & bricolagem, visite minha página: http://navalha
 
 Como um fã de William Burroughs e tendo um computador em vez de uma máquina de escrever, me pareceu imediato adaptar suas técnicas cut-up para minha realidade. E, obviamente, não fui o primeiro nem o último a pensar assim: é possível encontrar diversos programas desse tipo na internet (divirta-se: http://languageisavirus.com/).
 
-No entanto, o intento deste TOOLKIT é a praticidade: as operações são feitas com arquivos TXT, num instante, sem necessidade de acessar um website & etc. Além disso, o output também é um TXT: o texto original não é alterado. E todos os scripts (com exceção do foldin.sh) podem recortar & embarar um número indefinido de arquivos de uma vez: uma gigantesco cut-up dos seus textos.
+No entanto, o intento deste TOOLKIT é a praticidade: as operações são feitas com arquivos TXT, num instante, sem necessidade de acessar um website & etc. Além disso, o output também é um TXT: o texto original não é alterado. E todos os scripts (com exceção do 'foldin.sh') podem recortar & embarar um número indefinido de arquivos de uma vez: uma gigantesco cut-up dos seus textos.
 
 
 
 00003. COMO UTILIZAR?
 =====================
 
-Primeiro, é necessário ter uma noção básica (mesmo) de utilizar um terminal e a linha de comando (google it!). Ao abrir os arquivos ou rodá-los sem textos como argumento, algumas instruções básicas surgirão na tela.
+Primeiro, é necessário ter uma noção básica (mesmo) de utilizar um terminal e a linha de comando. Ao abrir os arquivos ou rodá-los sem textos como argumento, algumas instruções básicas aparecerão na tela.
 
 Basicamente, basta fazer o seguinte:
 
 1. Torne os scripts executáveis: chmod +x cutup*.sh foldin.sh
-2. Rode um deles sobre um texto seu:  ./cutup1.sh TEXTO.txt
+2. Rode um deles sobre um texto seu:  ./cutup1.sh ~/documentos/TEXTO.txt
 3. Abra o arquivo com o resultado no seu editor favorito.
 4. ...
 5. Divirta-se!
@@ -49,19 +48,4 @@ Para saber mais, visite: http://navalha.org/cutups
 Para ter acesso às últimas versões destes scripts e/ou para colaborar no desenvolvimento, acesso o repositório GIT: https://github.com/bcardoso/cutups
 
 Para criatividade repentina & divinação: RECORTE TUDO.
-
-
-
-
-
-						 ~~~~~~~~~~~~~~~~~~~~
-
-
-
-					        CUT-UP TOOLKIT
-						   by Bruno Cardoso
-					  http://navalha.org/cutups
-
-			   GNU/GPL. See LICENSE for license details
-					   Copyright (C) 2008-2012
 
