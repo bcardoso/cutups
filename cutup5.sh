@@ -27,7 +27,7 @@ OUTPUT=$BASEDIR/output
 
 # arquivos de entrada, saida e temporários
 ARQ=$BASEDIR/alltexts.txt
-CUTUP=$OUTPUT/cutup1_$(date +%F.%s).txt # formato do nome do arquivo
+CUTUP=$OUTPUT/cutup5_$(date +%F.%s).txt # formato do nome do arquivo
 TEMP=$BASEDIR/.temptxt # prefixo dos arquivos temporários
 
 
